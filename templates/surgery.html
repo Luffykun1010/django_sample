@@ -1,0 +1,34 @@
+{% extends 'basepage.html' %}
+
+{% block title %} Doctors {% endblock title %}
+{% block content %}
+<div class="row" style="background-color: rgb(125, 224, 125);">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8">
+        <div>
+            <h2
+                style="text-align: center;margin-top: 50px;margin-bottom: 50px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-weight: bold;">
+                Surgeon</h2>
+        </div>
+    </div>
+    <div class="col-lg-2"></div>
+</div>
+<div class="row">
+    <div class="col-lg-4"></div>
+    <div class="col-lg-4"
+        style="padding-top: 20px;margin-top: 20px; margin-bottom: 20px;display: flex;">
+        {%for d in doct%}
+        {% if d.dep_shor == "Surgeon"%}
+        <div class="card" style="width: 18rem;">
+            <img src="{{d.doc_image.url}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h4><a href="">{{d.doc_name}}</a></h4>
+                <p class="card-text">{{d.doc_spec}}</p>
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+    <div class="col-lg-4"></div>
+</div>
+{% endblock content %}

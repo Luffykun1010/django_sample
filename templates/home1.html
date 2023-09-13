@@ -1,0 +1,76 @@
+{% extends 'basepage.html' %}
+{%load static%}
+{% block title %} Home {% endblock title %}
+{% block content %}
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="width: auto;">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+      aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+      aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+      aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{%static '/images/IMG1.png'%}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{%static '/images/IMG2.png'%}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{%static '/images/IMG3.png'%}" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<div class="row" style="background-color: #ebeced;">
+  <div class="col-lg-2"></div>
+  <div class="col-sm-12 col-lg-8">
+    <h1 style="text-align: center; margin-top: 35px;color: rgb(65, 64, 63);font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-weight: bold;">About</h1>
+    <div style="display: flex;flex-wrap: wrap;">
+      <h3 style="color: rgb(60, 116, 184);font-family: Georgia, 'Times New Roman', Times, serif;">Who we are</h3>
+      <p style="color: rgb(60, 59, 57);"> Sunrise Hospital, a tertiary health care
+        centre, is widely recognized as a pioneer in ‘Laparoscopic and Endoscopic Surgeries’. Being the Apex Centre for
+        Minimally Invasive Surgery in Asia, we have also been honoured as a Centre of excellence in ‘Hernia Surgeries
+        and
+        Laparoscopic cancer Surgeries’. Specialized in ‘Accident and Trauma care’, we are ably equipped with
+        state-of-the-art treatment for all types of medical emergencies. We accommodate more than 46 medical departments
+        and specialties. Sunrise Hospital has branches in kochi, kasaragod, kanhangad and changaramkulam in Kerala.
+        Aesthetically laid out, this hospital is maintained under very stringent conditions of asepsis that ensures a
+        clean infection-free environment which is at the same time extremely warm, caring and relaxing.
+      </p>
+      <h3 style="margin-top: 25px;color: rgb(60, 116, 184);font-family: Georgia, 'Times New Roman', Times, serif;">Clinical Excellence</h3>
+      <p style="color: rgb(60, 59, 57);">Our dedicated medical team, that includes eminent doctors and equally
+        proficient medical, paramedical andadministrative personnel, brings you world-class medical expertise and
+        patient care. Dr Hafeez Rahman Padiyath –
+        Founder/Chairman, is world-renowned as one of the experts in Minimally Invasive Surgery or Laparoscopic Surgical
+        Procedures. Over the years, he has developed and standardized many unique techniques of his own, valued
+        worldwide. ‘Sunrise Team’ works with a drive determined on a focus of experience, expertise and care. The team
+        led by a set of experienced hands has moulded a legacy of excellence in Women’s Health care arena. Sunrise
+        Hospital has foremost medical practitioners with clinical expertise, hands-on experience and medical research in
+        prominent branches of the medical health care spectrum.
+      </p>
+      <h3 style="margin-top: 25px;color: rgb(60, 116, 184);font-family: Georgia, 'Times New Roman', Times, serif;">Vision</h3>
+      <p style="color: rgb(60, 59, 57); padding-bottom: 60px;">“Establish a Centre of Excellence in Laparoscopic
+        Surgeries and other medical/surgical specialities. We also plan to establish 25 state – of – the – art hospitals
+        across the world.”
+
+        We serve the industry as a global partner for improving health; lifestyle and medical practices. We undertake
+        special projects and develop medical positions affecting the health industry. Our doctors conduct community
+        outreach programs in schools, villages and civilian bodies about preventive medicine and healthy lifestyle. To
+        improve understanding of the health industry we try to be visible, accessible and credible source of information
+        to our patients, the media and the society. Our aim involves developing and disseminating best practice in the
+        health industry continually from feedback of our patients, staff and departments. We at Sunrise take it as a
+        priority to promote best practice in lifestyle, health care and social responsibilities.
+    </div>
+  </div>
+</div>
+{% endblock content %}

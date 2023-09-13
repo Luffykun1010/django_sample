@@ -1,0 +1,127 @@
+{% extends 'basepage.html' %}
+{% block title %} Dr. Hafeez Rahman Padiyath,Chief Gynecologist & Laparoscopic Surgeon {% endblock title %}
+{% block content %}
+<div class="row" style="background-color: rgb(125, 224, 125);">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8">
+        <div>
+            <h2
+                style="text-align: center;margin-top: 50px;margin-bottom: 50px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-weight: bold;">
+                Dr. Hafeez Rahman Padiyath</h2>
+        </div>
+    </div>
+    <div class="col-lg-2"></div>
+</div>
+<div class="row" style="margin-top: 20px;">
+    <div class="col-lg-2 col-sm-2"></div>
+    <div class="col-lg-2 col-sm-5" style=" margin-top: 30px;margin-bottom: 60px;">
+        {%for d in doct%}
+        {% if d.doc_name == "Dr. Hafeez Rahman Padiyath"%}
+        <div style="margin-top: 20px; margin-bottom: 20px;">
+            <img style="width: 250px;" src="{{d.doc_image.url}}" class="card-img-top" alt="...">
+            <h2 style="text-decoration: none;color: blueviolet;">{{d.doc_name}}</h2>
+            <p>{{d.doc_spec}}</p>
+        </div>
+        {% endif %}
+        {% endfor %}
+        <a href="{% url 'booking' %}">Book An Appointment</a>
+    </div>
+  
+
+    <div class="col-lg-6 col-sm-5" style=" margin-top: 50px;margin-bottom: 60px;margin-left: 10px;">
+        <p> <b>Dr. Hafeez Rahman</b> is a Consultant Gynaecologist & Laparoscopic Surgeon and the Head of the Department
+            of
+            Obstetrics
+            & Gynaecology at Sunrise Hospital since October 2005, performed highest number of laparoscopic surgeries
+            i.e.
+            more
+            than 120,000 laparoscopic surgeries. Moreover, he performed first laparoscopic cancer surgery in UAE,
+            Bangladesh
+            and
+            laparoscopic radical surgery in Sri Lanka and he has successfully performed over 35,000 laparoscopic
+            hysterectomies
+            (TLH) so far. He is often invited by the governments and private institutions of UAE, Bangladesh, Malaysia,
+            South
+            Africa and Sri Lanka for laparoscopic surgical procedures and has trained and assisted numerous
+            gynaecologists
+            across the world in laparoscopic procedures.</p>
+
+        <h2 style="margin-top: 40px;"> Academic Qualification </h2>
+        <p>MBBS,MD,DNB,FCLS</p>
+
+        <h2 style="margin-top: 40px;">Professional Record</h2>
+        <p>Sr. Consultant Gynecologist & Laparoscopic Surgeon - PVS Memorial Hospital (March 1993-December 1995) <br>
+            Consultant Gynecologist& Laparoscopic Surgeon –Cochin Hospital, Kochi (December 1995-May 2005) <br>
+            Sr. Consultant Gynecologist& Laparoscopic Surgeon - Sunrise Hospital (October 2005 to till date) <br>
+            Director, Center for Advanced Gynec Endoscopy</p>
+
+        <h2 style="margin-top: 40px;">Year Of Experience</h2>
+        <p>25+ Years</p>
+
+        <h2 style="margin-top: 40px;">Books Authored</h2>
+        <p>Several International Publications <br>
+            Several chapters in medical books on Laparoscopy</p>
+        <h2 style="margin-top: 40px;">Assignments Held</h2>
+        Vice President, IMAGES
+        Hon. Joint Secretary, FOGSI (Federation of Obstetric & Gynecological Societies of India). <br>
+        Chairman, FOGSI (Federation of Obstetrics & GynecologicalSocieties of India) <br>
+        Vice President, Indian Society of Minimal Access & Gynecological Societies of India <br>
+        Chairman, Young Talent Promotion Committee [FOGSI] <br>
+        Hon. Secretary, Indian Faculty of Endosonography and Endoscopy
+
+        <h2 style="margin-top: 40px;">Awards And Achievements</h2>
+        <p>Recipient of numerous awards including the World Medical Council Award, Shan Ratnam Award - AOFOG, Singapore
+            and
+            Masters Award in Endoscopic Surgery etc. <br>
+            Conducted the largest series of laparoscopic surgeries (more than 1,20,000 surgeries) in the world. <br>
+            Conducted the largest series of Laparoscopic Hysterectomies (35,000) in the world. <br>
+            Credited with the removal of the largest uterus in the world (4.9kg weight). <br>
+            Conducted the first total Laparoscopic Hysterectomy in UAE at Zulekha Hospital. <br>
+            Conducted the first Laparoscopic cancer surgery in UAE at the Ministry Hospital at Alwasal. <br>
+            Conducted the first Laparoscopic surgery for ovarian cancer at Welcare Hospital, UAE. <br>
+            Conducted the first successful laparoscopic tubal recanalization with pregnancy in UAE at Medcare Hospital.
+            <br>
+            Conducted the first Laparoscopic cancer surgery in Bangladesh in Birden Hospital. <br>
+            Conducted the first Laparoscopic Radical Surgery in Sri Lanka. <br>
+            Conducted the first Urinary fistula surgery Laparoscopically in India. <br>
+            Conducted the first successful documented procedure of Amniopatch in India for preterm premature rupture of
+            membranes. <br>
+            Conducted the first laparoscopic ureteric implantation into bladder in south India. <br>
+            Conducted the world’s second Laparoscopic correction of acute postpartum uterine inversion. <br>
+            Conducted fetoscopy for the first time in India. <br>
+            Conducted the largest number of laparoscopic BurschColposuspensions in India. <br>
+            Credited with the Removal of the largest fibroid in UAE laparoscopically at Medcare Hospital. <br>
+            Conducted 230 International workshops (seminars and conferences) in Gynec endoscopy as faculty. <br>
+            Trained more than 3500 gynecologists across the Globe in the art of Laparoscopic surgery. <br>
+        </p>
+        <h2 style="margin-top: 40px;">Pioneer In The Country</h2>
+        <p>Laparoscopic Total recanalisation <br>
+            Total Laparoscopic pelvic lymphadenectomy <br>
+            Post-partum check-up <br>
+            Total Laparoscopic Hysterectomy <br>
+            Laparoscopic Radical pelvic surgeries <br>
+            Pelvic floor repair surgeries <br>
+            Has devised own method <br>
+            Vaginal Hysterectomy <br>
+            Vaginal Myomectomy <br>
+            Vaginal uterine suturing <br>
+            Uterine inversion correction <br>
+            Laproscopic cervical encirclage
+        </p>
+        <h2 style="margin-top: 40px;">Clinical Expertise</h2>
+        <p>High risk obstetrics
+            Urogynaecology <br>
+            Minimally invasive surgery <br>
+            Laparoscopic surgery for adenomyosis <br>
+            TVT for stress urinary incontinence <br>
+            Infertility treatment <br>
+            Sling surgeries <br>
+            Vaginal and abdominal hysterectomy  <br>
+            Mesh repair
+        </p>
+    </div>
+</div>
+<div class="col-lg-2"></div>
+</div>
+
+{% endblock content %}

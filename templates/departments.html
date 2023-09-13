@@ -1,0 +1,44 @@
+{% extends 'basepage.html' %}
+
+{% block title %} Departments and Doctors {% endblock title %}
+{% block content %}
+<div class="row" style="background-color: rgb(125, 224, 125);">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8">
+        <div>
+            <h2
+                style="text-align: center;margin-top: 50px;margin-bottom: 50px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-weight: bold;">
+                Departments</h2>
+        </div>
+    </div>
+    <div class="col-lg-2"></div>
+</div>
+<div class="row" style="margin-top: 20px;">
+    {% for d in dept %}
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8">
+        <div>
+            <h3 style="color: rgb(60, 116, 184);font-family: Georgia, 'Times New Roman', Times, serif;margin-top: 50px">
+                {{d.dep_name}}</h3>
+            <p style="font-size: large;">{{d.dep_desc}}</p>
+        </div>
+    </div>
+    <div class="col-lg-2"></div>
+    {% if d.dep_name == "Gynaecology, Obstetrics And Infertility"%}
+    <a style="text-align: center;"><button
+            style="background-color:  rgb(125, 224, 125);border-color: white;width: 550px;height: 50px;margin-top: 40px;margin-top: 10px; margin-bottom: 40px;"
+            onclick="location.href='{% url 'gynecologist' %}'">List of {{d.dep_name}} Doctors</button></a>
+            <hr>
+    {% endif %}
+    {% if d.dep_name == "Shoulder And Upper Limb Surgery"%}
+    <a style="text-align: center;"><button
+            style="background-color:  rgb(125, 224, 125);border-color: white;width: 550px;height: 50px;margin-top: 40px;margin-top: 10px; margin-bottom: 40px;"onclick="location.href='{% url 'surgeon' %}'">List of {{d.dep_name}} Doctors</button></a>
+            <hr>
+    {% endif %}
+    {% if d.dep_name == "Sunrise Assisted Reproduction Centre (IVF)"%}
+    <a style="text-align: center;"><button
+            style="background-color:  rgb(125, 224, 125);border-color: white;width: 550px;height: 50px;margin-top: 40px;margin-top: 10px; margin-bottom: 40px;">List of {{d.dep_name}} Doctors</button></a>
+    {% endif %}
+    {% endfor %}
+</div>
+{% endblock content %}

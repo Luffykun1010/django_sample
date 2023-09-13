@@ -1,0 +1,119 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}</title>
+    <link rel="icon" href="data:image/jpeg;base64,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">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static '/css/style.css' %}">
+</head>
+
+<body style="width: 100%;">
+    <div class="row fixed-top position-relative" style="width: auto;">
+        <div class="col-lg-1 col-sm-2"></div>
+        <div class="col-lg-9 col-sm-10">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="{% url 'home' %}">
+                        <img src="{%static '/images/SUNRISELOGO.png'%}"
+                            style="height: 70px; " alt="sunrise_logo">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto"
+                        style="font-size: larger; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;margin-right: 120px;text-align: center;">
+                        <li class="nav-item" style="width: 145px;">
+                            <a class="nav-link" aria-current="page" href="{% url 'department' %}">Departments</a>
+                        </li>
+                        <li class="nav-item" style="width: 100px;">
+                            <a class="nav-link" aria-current="page" href="{% url 'doctor' %}">Doctors</a>
+                        </li>
+                        <li class="nav-item" style="width: 100px;">
+                            <a class="nav-link" href="{% url 'booking' %}">Booking</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <hr class="bg-success" style="opacity: 50; height: 4px;">
+    </div>
+    <section style="width: 100%; margin-top: -16px;background-color: #ebeced;">
+        {% block content %}{% endblock content %}
+    </section>
+    <footer class="fixed-bottom position-relative" style="width: auto;">
+        <div class="row bg-secondary ms-auto" style=" color: white;">
+            <dic class="col-md-2"></dic>
+            <div class="col-sm-12 col-md-2 " style="margin-top: 60px;margin-bottom: 60px;">
+                <h5 style="font-weight: 800;">Support Services</h5>
+                <div style="margin-top: 35px;">
+                    <a style="text-decoration: none;color: white;font-weight: 500;" href="">Emergency Services</a><br>
+                    <a style="text-decoration: none;color: white;font-weight: 500;" href="">Intensive Care Units</a><br>
+                    <a style="text-decoration: none;color: white;font-weight: 500;" href="">Pharmacy</a><br>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-2" style="margin-top: 60px;margin-bottom: 60px;">
+                <h5 style="font-weight: 800;">Links</h5>
+                <div style="margin-top: 35px;">
+                    <a style="text-decoration: none;color: white;font-weight: 500;" href="">Departments</a><br>
+                    <a style="text-decoration: none;color: white;font-weight: 500;" href="">Doctors</a><br>
+                    <a style="text-decoration: none;color: white;font-weight: 500;" href="">Careers</a><br>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-2" style="margin-top: 60px;margin-bottom: 60px;">
+                <h5 style="font-weight: 800;">Sunrise Videos</h5>
+                <div style="margin-top: 35px;">
+                    <a style="text-decoration: none;color: white;font-weight: 500;" href="">Sunrise Meditalks</a><br>
+                    <a style="text-decoration: none;color: white;font-weight: 500;" href="">Facebook Live</a><br>
+                    <a style="text-decoration: none;color: white;font-weight: 500;" href="">Patient Testimonials</a><br>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-2" style="margin-top: 60px;margin-bottom: 60px;">
+                <h5 style="font-weight: 800;">Contact Us</h5>
+                <div style="margin-top: 35px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="margin-top: -1px;"
+                        fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                    </svg>
+                    <h6 style="margin-left: 25px;margin-top: -20px;font-weight: 500;">+91 4842660000</h6>
+                    <svg xmlns="htt*p://www.w3.org/2000/svg" width="16" height="16" style="margin-top: 15px;"
+                        fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                    </svg>
+                    <h6 style="margin-left: 25px;margin-top: -20px;font-weight: 500;"> Sunrise Hospital Seaport -
+                        Airport Road, Kakkanad, Kochi - 682030, Kerala, India.</h6>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="margin-top: 2px;"
+                        fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
+                    </svg>
+                    <h6 style="margin-left: 25px;margin-top: -20px;font-weight: 500;">enquiry@sunrisehospital.in</h6>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="col-sm-12">
+            <p style="text-align: center; padding-top:20px;">Copyright © 2023. Sunrise Hospital All Rights Reserved | Powered by <a href="" style="text-decoration: none;color: black;">Muhammed Suhail</a></p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

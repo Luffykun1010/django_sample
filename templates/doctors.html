@@ -1,0 +1,52 @@
+{% extends 'basepage.html' %}
+
+{% block title %} Doctors {% endblock title %}
+{% block content %}
+<div class="row" style="background-color: rgb(125, 224, 125);">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8">
+        <div>
+            <h2
+                style="text-align: center;margin-top: 50px;margin-bottom: 50px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-weight: bold;">
+                Doctors</h2>
+        </div>
+    </div>
+    <div class="col-lg-2"></div>
+</div>
+<div class="row">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8" style="padding-top: 20px;">
+        {%for d in doct%}
+        <div style="margin-top: 20px; margin-bottom: 20px; display: flex;flex-wrap: nowrap;">
+            <img style="width: 250px;" src="{{d.doc_image.url}}" class="card-img-top" alt="...">
+            <div style="padding-left: 50px;">
+                <h2 style="text-decoration: none;color: blueviolet;">{{d.doc_name}}</h2>
+                <p>{{d.doc_spec}}</p>
+                {% if d.doc_name == "Dr. Hafeez Rahman Padiyath"%}
+                <div style="margin-top: 145px;margin-left: 10px;">
+                    <a href="{% url 'booking' %}">Book An Appoinment</a>  |  <a href="{% url 'drhafeez' %}">Detailed Profile</a>
+                </div>
+                {% endif %}
+                {% if d.doc_name == "Dr. Prathap Kumar KR"%}
+                <div style="margin-top: 145px;margin-left: 10px;">
+                    <a href="{% url 'booking' %}">Book An Appoinment</a>  |  <a href="">Detailed Profile</a>
+                </div>
+                {% endif %}
+                {% if d.doc_name == "Dr Shemini Saleem"%}
+                <div style="margin-top: 145px;margin-left: 10px;">
+                    <a href="{% url 'booking' %}">Book An Appoinment</a>  |  <a href="">Detailed Profile</a>
+                </div>
+                {% endif %}
+                {% if d.doc_name == "Dr. Aby K. Koshy"%}
+                <div style="margin-top: 145px;margin-left: 10px;">
+                    <a href="{% url 'booking' %}">Book An Appoinment</a>  |  <a href="">Detailed Profile</a>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+        <hr>
+        {% endfor %}
+    </div>
+    <div class="col-lg-2"></div>
+</div>
+{% endblock content %}
