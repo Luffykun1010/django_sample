@@ -12,9 +12,8 @@ def booking(request):
         form=Booking.objects.create(p_name=p_name,p_phone=p_phone,doc_name=doc_name,booking_date=booking_date)
         form.save()
         return render(request,'confirmation.html')
-    form=BookingForm()
     dict_form={
-        'form': form,
+
         'doct':Doctors.objects.all()
     }
     return render(request,'booking.html',dict_form)

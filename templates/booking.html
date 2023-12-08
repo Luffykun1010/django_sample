@@ -22,7 +22,7 @@
                     <label for="name" style="font-weight: 500; ">Patient Name:</label>
                 </div>
                 <div class="col-lg-8 col-sm-2 ">
-                    <input type="name" id="name" name="name" style=" width: 60%; border-color:   rgb(125, 224, 125);" placeholder="Enter Patient Name" required>
+                    <input type="name" id="name" name="name" style=" width: 60%; border-color:   rgb(125, 224, 125);outline: none;" placeholder="Enter Patient Name" required>
                 </div>
             </div>
             <div class="row d-flex" style="margin-top: 20px;flex-direction: row;">
@@ -31,21 +31,21 @@
                         Number :</label>
                 </div>
                 <div class="col-lg-8 col-sm-2 ">
-                    <input type="text" style="width: 60%; border-color:   rgb(125, 224, 125);" pattern="[0-9]{3}[0-9]{4}[0-9]{3}" id="phone"
+                    <input type="text" style="width: 60%; border-color:   rgb(125, 224, 125);outline: none;" pattern="[0-9]{3}[0-9]{4}[0-9]{3}" id="phone"
                         name="phone" placeholder="Enter Mobile number" required>
                 </div>
             </div>
             <div class="row d-flex" style="margin-top: 20px;flex-direction: row;">
                 <div class="col-lg-3 col-sm-2 ">
-                    <label for="docname" style="font-weight: 500; ">Doctor Name :</label>
+                    <label for="docname" style="font-weight: 500; ">Doctor :</label>
                 </div>
                 <div class="col-lg-8 col-sm-2 ">
                     <select type="text"
-                        style="width: 60%;border: none;outline: none;border: 3px solid  rgb(125, 224, 125);"
+                        style="width: 60%;border: none;outline: none;border: 3px solid  rgb(125, 224, 125);outline: none;"
                         id="docname" name="docname" required>
                         <option value="">Select a Doctor</option>
                         {% for d in doct %}
-                        <option value="{{d.doc_name}}">{{d.doc_name}}</option>
+                        <option value="{{d.doc_name}}-({{d.doc_spec}})">{{d.doc_name}} ({{d.doc_spec}})</option>
                         {% endfor %}
                     </select>
                 </div>
@@ -56,7 +56,7 @@
                         Number :</label>
                 </div>
                 <div class="col-lg-8 col-sm-2 ">
-                    <input type="date" style="margin-top: 8px; width: 60%; border-color:   rgb(125, 224, 125);" pattern="[0-9]{3}[0-9]{4}[0-9]{3}" id="date"
+                    <input type="date" style="margin-top: 8px; width: 60%; border-color:   rgb(125, 224, 125);outline: none;" pattern="[0-9]{3}[0-9]{4}[0-9]{3}" id="date"
                         name="date" placeholder="dd-mm-yyyy" required>
                 </div>
             </div>
